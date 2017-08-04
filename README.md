@@ -1,5 +1,5 @@
 # ConvLSTM_pytorch
-**[This](https://github.com/ndrplz/ConvLSTM_pytorch/blob/master/convlstm.py)** file **implements of Convolutional LSTM in PyTorch** made by [me](https://github.com/ndrplz) and [DavideA](https://github.com/DavideA).
+**[This](https://github.com/ndrplz/ConvLSTM_pytorch/blob/master/convlstm.py)** file **contains the implementation of Convolutional LSTM in PyTorch** made by [me](https://github.com/ndrplz) and [DavideA](https://github.com/DavideA).
 
 We started from [this](https://github.com/rogertrullo/pytorch_convlstm/blob/master/conv_lstm.py) implementation and heavily refactored it add added features to match our needs.
 
