@@ -114,7 +114,7 @@ class ConvLSTM(nn.Module):
         """
         if not self.batch_first:
             # (t, b, c, h, w) -> (b, t, c, h, w)
-            input_tensor.permute(1, 0, 2, 3, 4)
+            input_tensor = input_tensor.permute(1, 0, 2, 3, 4)
 
         # Implement stateful ConvLSTM
         if hidden_state is not None:
