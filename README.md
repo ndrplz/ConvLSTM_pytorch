@@ -15,8 +15,7 @@ The ConvLSTM class supports an arbitrary number of layers. In this case, it can 
 
 Example usage:
 ```
-model = ConvLSTM(input_size=(height, width),
-                 input_dim=channels,
+model = ConvLSTM(input_dim=channels,
                  hidden_dim=[64, 64, 128],
                  kernel_size=(3, 3),
                  num_layers=3,
