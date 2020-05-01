@@ -142,7 +142,7 @@ class ConvLSTM(nn.Module):
             # Since the init is done in forward. Can send image size here
             hidden_state = self._init_hidden(batch_size=b,
                                              image_size=(h, w))
-        elif len(hidden_state) != num_layers:
+        elif len(hidden_state) != self.num_layers:
             raise NotImplementedError()
             
 
