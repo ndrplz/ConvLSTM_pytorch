@@ -134,6 +134,9 @@ class ConvLSTM(nn.Module):
         if not self.batch_first:
             # (t, b, c, h, w) -> (b, t, c, h, w)
             input_tensor = input_tensor.permute(1, 0, 2, 3, 4)
+            seq_dim = 0
+        else:
+            seq_dim = 1
 
         b, _, _, h, w = input_tensor.size()
 
@@ -160,7 +163,7 @@ class ConvLSTM(nn.Module):
                                                  cur_state=[h, c])
                 output_inner.append(h)
 
-            layer_output = torch.stack(output_inner, dim=1)
+            layer_output = torch.stack(output_inner, dim=seq_dim)
             cur_layer_input = layer_output
 
             layer_output_list.append(layer_output)
